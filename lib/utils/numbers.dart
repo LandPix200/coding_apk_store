@@ -1,6 +1,10 @@
 class NumberUtils {
   static String formatNumberM(int number) {
-    if (number >= 1000000) {
+    if (number >= 1000000000) {
+      double simplified = number / 1000000000;
+      String formatted = simplified.toStringAsFixed(1);
+      return '$formatted B';
+    } else if (number >= 1000000) {
       double simplified = number / 1000000;
       String formatted = simplified.toStringAsFixed(1);
       return '$formatted M';
