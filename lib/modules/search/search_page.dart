@@ -42,6 +42,7 @@ class ApkCardSearchResult extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CodingApkBloc, CodingApkState>(
       builder: (context, state) {
+        print(state);
         if (state is CodingApkDownloadSuccess) {
           return ApkCard(apk: state.apk);
         }

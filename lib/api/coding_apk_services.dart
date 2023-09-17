@@ -16,7 +16,7 @@ class CodingApkServices {
       final jsonBody = jsonDecode(response.body);
       return Apk.fromJson(jsonBody);
     } else {
-      throw "App Not Find";
+      throw "App Not Found";
     }
   }
 }
